@@ -1,12 +1,14 @@
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/layout/Sidebar';
+import Content from './components/layout/Content';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
   return (
-    <div className='flex flex-col'>
-      <Sidebar />
-      <div>
-        helloooo
-      </div>
+    <div className="flex">
+      <Router>
+        <Sidebar />
+        <Content />
+      </Router>
     </div>
   );
 }
